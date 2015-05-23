@@ -63,7 +63,7 @@ executeAnalysis <- function() {
   #We create a data set ordered subject
   Data<-aggregate(. ~subject + activity, extractedData, mean)
   Data<-Data[order(Data$subject,Data$activity),]
-  write.table(Data, file = "tidydata.txt",row.name=FALSE)
+  write.table(Data, file = "newdata.txt",row.name=FALSE)
 
 
 }
