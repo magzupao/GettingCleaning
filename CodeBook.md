@@ -33,7 +33,7 @@ Images of the data loaded into memory RStudio
 ![activityLabels](activityLabels.png)  
   
 -----------------  
-We create a new data set to analyze the data.
+We create a new data set to analyze the data.  
 dataSubject  
 ![dataSubject](dataSubject.png)  
   
