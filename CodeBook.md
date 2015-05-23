@@ -17,21 +17,21 @@ Structure of the data source
 10. $home/user/Project_UCI HAR_Dataset/README.txt  
 
 Images of the data loaded into memory RStudio  
-1 ----------
-![dataSubjectTrain](dataSubjectTrain.png)
-2 ----------
-![dataActivityTrain](dataActivityTrain.png)
-3 ----------
-![dataFeaturesTrain](dataFeaturesTrain.png)
-4 ----------
-![dataSubjectTest ](dataSubjectTest.png)
-5 ----------
-![dataActivityTest](dataActivityTest.png)
-6 ----------
-![dataFeaturesTest](dataFeaturesTest.png)
-7 ----------
-![dataFeaturesNames](dataFeaturesNames.png)
-8 ----------
-![activityLabels](activityLabels.png)
+1  
+![dataSubjectTrain](dataSubjectTrain.png)  
+2  
+![dataActivityTrain](dataActivityTrain.png)  
+3  
+![dataFeaturesTrain](dataFeaturesTrain.png)  
+4  
+![dataSubjectTest ](dataSubjectTest.png)  
+5  
+![dataActivityTest](dataActivityTest.png)  
+6  
+![dataFeaturesTest](dataFeaturesTest.png)  
+7  
+![dataFeaturesNames](dataFeaturesNames.png)  
+8  
+![activityLabels](activityLabels.png)  
 
 
