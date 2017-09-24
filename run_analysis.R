@@ -22,14 +22,14 @@ executeAnalysis <- function() {
   #
   # load data 
   print("****** 1. Merges the training and the test sets to create one data set ****")
-  dataSubjectTrain <- read.table("dataset/train/subject_train.txt",header = FALSE)
-  dataSubjectTest  <- read.table("dataset/test/subject_test.txt",header = FALSE)
+  dataSubjectTrain <- read.table("UCI HAR Dataset/train/subject_train.txt",header = FALSE)
+  dataSubjectTest  <- read.table("UCI HAR Dataset/test/subject_test.txt",header = FALSE)
   
-  dataActivityTest  <- read.table("dataset/test/y_test.txt",header = FALSE)
-  dataActivityTrain <- read.table("dataset/train/y_train.txt",header = FALSE)
+  dataActivityTest  <- read.table("UCI HAR Dataset/test/y_test.txt",header = FALSE)
+  dataActivityTrain <- read.table("UCI HAR Dataset/train/y_train.txt",header = FALSE)
   
-  dataFeaturesTest  <- read.table("dataset/test/X_test.txt",header = FALSE)
-  dataFeaturesTrain <- read.table("dataset/train/X_train.txt",header = FALSE)
+  dataFeaturesTest  <- read.table("UCI HAR Dataset/test/X_test.txt",header = FALSE)
+  dataFeaturesTrain <- read.table("UCI HAR Dataset/train/X_train.txt",header = FALSE)
   
   #Merge subject, train and test
   dataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
@@ -39,7 +39,7 @@ executeAnalysis <- function() {
   #add title head
   colnames(dataSubject) <- "subject"					
   colnames(dataActivity) <- "activity"				
-  dataFeaturesNames <- read.table("dataset/features.txt",head=FALSE)				  
+  dataFeaturesNames <- read.table("UCI HAR Dataset/features.txt",head=FALSE)				  
   colnames(dataFeatures) <- dataFeaturesNames$V2			
   
   mergeColData <- cbind(dataFeatures,dataActivity,dataSubject)
@@ -54,7 +54,7 @@ executeAnalysis <- function() {
   
   print("******3. Uses descriptive activity names to name the activities in the data set ******")
   #We change the numerical value of "activity" column by its description, example 5 = STANDING
-  activityLabels <- read.table("dataset/activity_labels.txt",header = FALSE)
+  activityLabels <- read.table("UCI HAR Dataset/activity_labels.txt",header = FALSE)
   #head(activityLabels$V2[extractedData$activity],30)
   extractedData$activity <- head(activityLabels$V2[extractedData$activity],length(extractedData$activity))			
   
@@ -74,6 +74,5 @@ executeAnalysis <- function() {
   Data<-aggregate(. ~subject + activity, extractedData, mean)
   Data<-Data[order(Data$subject,Data$activity),]
   write.table(Data, file = "newdata_temp.txt",row.name=FALSE)
-  
   
 }
