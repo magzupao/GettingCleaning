@@ -102,7 +102,10 @@ names(extractedData)
 #We create a data set ordered subject
 Data<-aggregate(. ~subject + activity, extractedData, mean)
 Data<-Data[order(Data$subject,Data$activity),]
-Data
 write.table(Data, file = "newdata_temp.txt",row.name=FALSE)
 
 ```
+
+
+source code:
+https://github.com/magzupao/GettingCleaning/
